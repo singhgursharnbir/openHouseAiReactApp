@@ -20,10 +20,12 @@ class Community extends React.Component<Props> {
     ev.target.src =
       "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg";
   }
+
   formatter = new Intl.NumberFormat(undefined, {
     style: "currency",
     currency: "CAD"
   });
+
   render() {
     return (
       <div>

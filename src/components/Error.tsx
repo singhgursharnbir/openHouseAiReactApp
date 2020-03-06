@@ -4,6 +4,7 @@ class Error extends React.Component {
   refreshPage() {
     window.location.reload(false);
   }
+
   render() {
     return (
       <div className="text-center mt-4">

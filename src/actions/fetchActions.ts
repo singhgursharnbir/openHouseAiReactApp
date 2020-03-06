@@ -5,6 +5,8 @@ import { FetchHomesTypes } from "../store/homes/types";
 import { FetchCommunityTypes } from "../store/communities/types";
 import { Action } from "redux";
 
+//Action to fetch all communities, and catch error if there is a error while fetching data
+
 export const fetchAllCommunities = (
   message: string
 ): ThunkAction<
@@ -28,6 +30,8 @@ export const fetchAllCommunities = (
       dispatch({ type: ADD_ERROR, error: err });
     });
 };
+
+//Action to fetch all homes, and catch error if there is a error while fetching data
 
 export const fetchAllHomes = (
   message: string

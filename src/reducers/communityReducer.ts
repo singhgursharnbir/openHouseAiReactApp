@@ -1,9 +1,12 @@
 import { FETCH_COMMUNITIES } from "../actions";
 import { FetchCommunityTypes } from "../store/communities/types";
 
+//Initial state
 const initialState = {
   communities: []
 };
+
+//Reducer function to serve data to the action with return type object, Also as required data is sorted before sending back
 
 export default function(
   state = initialState,
@@ -25,6 +28,7 @@ export default function(
         return comparison;
       });
 
+      //Now assign it to communities
       return {
         communities: action.payload
       };

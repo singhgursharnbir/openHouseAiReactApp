@@ -8,25 +8,17 @@ import Error from "./Error";
 
 interface Props {
   communities: [community];
-  homes: [home];
   errors: String;
   fetchAllCommunities: Function;
   fetchAllHomes: Function;
-  countedHomes: { [key: string]: number };
 }
+
 class CommunityComponent extends React.Component<Props> {
   componentDidMount() {
     this.props.fetchAllCommunities();
     this.props.fetchAllHomes();
   }
-  addDefaultSrc(ev: any) {
-    ev.target.src =
-      "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg";
-  }
-  formatter = new Intl.NumberFormat(undefined, {
-    style: "currency",
-    currency: "CAD"
-  });
+
   render() {
     const postItem =
       this.props.errors === "" ? (
@@ -44,13 +36,11 @@ const mapStateToProps = (state: {
   errors: string;
   communities: { communities: [community] };
   homes: { homes: [home]; homeCount: { [key: string]: number } };
-  countedHomes: [];
 }) => {
   return {
     errors: state.errors,
     communities: state.communities.communities,
-    homes: state.homes.homes,
-    countedHomes: state.homes.homeCount
+    homes: state.homes.homes
   };
 };
 
