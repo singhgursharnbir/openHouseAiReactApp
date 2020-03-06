@@ -1,8 +1,8 @@
 import { FETCH_COMMUNITIES, FETCH_HOMES } from "./index";
 import { ThunkAction } from "redux-thunk";
 
-import { home, fetchHomes, FetchHomesTypes } from "../store/homes/types";
-import { community, FetchCommunityTypes } from "../store/communities/types";
+import { FetchHomesTypes } from "../store/homes/types";
+import { FetchCommunityTypes } from "../store/communities/types";
 import { Action } from "redux";
 
 export const fetchAllCommunities = (

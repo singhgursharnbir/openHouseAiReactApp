@@ -1,4 +1,5 @@
 export interface community {
+  sort: Function;
   id: string;
   name: string;
   imgUrl: string;

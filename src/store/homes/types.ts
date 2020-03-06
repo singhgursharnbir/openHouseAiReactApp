@@ -1,4 +1,5 @@
 export interface home {
+  forEach: Function;
   id: string;
   communityId: string;
   price: number;
@@ -10,9 +11,14 @@ export interface fetchHomes {
 }
 
 export const FETCH_HOMES = "FETCH_HOMES";
+export const COUNT_HOMES = "COUNT_HOMES";
 
 interface FetchHomesAction {
   type: typeof FETCH_HOMES;
   payload: home;
 }
-export type FetchHomesTypes = FetchHomesAction;
+
+interface CountHomes {
+  type: typeof COUNT_HOMES;
+}
+export type FetchHomesTypes = FetchHomesAction | CountHomes;
