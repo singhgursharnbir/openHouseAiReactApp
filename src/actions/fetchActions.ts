@@ -1,4 +1,4 @@
-import { FETCH_COMMUNITIES, FETCH_HOMES } from "./index";
+import { FETCH_COMMUNITIES, FETCH_HOMES, ADD_ERROR } from "./index";
 import { ThunkAction } from "redux-thunk";
 
 import { FetchHomesTypes } from "../store/homes/types";
@@ -22,7 +22,11 @@ export const fetchAllCommunities = (
         type: FETCH_COMMUNITIES,
         payload: communities
       })
-    );
+    ) // Async action failed...
+    .catch(err => {
+      // Dispatch the generic "global errors" action
+      dispatch({ type: ADD_ERROR, error: err });
+    });
 };
 
 export const fetchAllHomes = (
@@ -40,5 +44,9 @@ export const fetchAllHomes = (
         type: FETCH_HOMES,
         payload: homes
       })
-    );
+    )
+    .catch(err => {
+      // Dispatch the generic "global errors" action
+      dispatch({ type: ADD_ERROR, error: err });
+    });
 };

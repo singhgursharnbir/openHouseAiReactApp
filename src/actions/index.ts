@@ -1,2 +1,3 @@
 export const FETCH_COMMUNITIES = "FETCH_COMMUNITIES";
 export const FETCH_HOMES = "FETCH_HOMES";
+export const ADD_ERROR = "ADD_ERROR";
