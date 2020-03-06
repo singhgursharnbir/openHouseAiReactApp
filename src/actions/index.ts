@@ -1,0 +1,2 @@
+export const FETCH_COMMUNITIES = "FETCH_COMMUNITIES";
+export const FETCH_HOMES = "FETCH_HOMES";
