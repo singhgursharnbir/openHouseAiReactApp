@@ -5,8 +5,8 @@ This project was created with [Create React App](https://github.com/facebook/cre
 To get the frontend running locally:
 
 - Clone this repo
-- cd to repo like `cd .\openHouseAiReactApp`
-- `npm install` to install all req'd dependencies( make sure have npm installed if not install [NPM](https://www.npmjs.com/get-npm) ). Make sure package.json is in directory before running npm install
+- cd to repo like `cd .\openHouseAiReactApp-master`
+- `npm install` to install all req'd dependencies( make sure have npm installed if not install [NPM](https://nodejs.org/en/) ). Make sure package.json is in directory before running npm install
 - `npm start` to start the local server (this project uses create-react-app)
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
